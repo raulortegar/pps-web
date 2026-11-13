@@ -1,11 +1,13 @@
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="description" content="Portfolio" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
       rel="stylesheet"
@@ -15,7 +17,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="styles.css" />
-    <title>Raj Shekhar</title>
+    <title>PPS Web</title>
   </head>
   <body class="light" id="top">
     <header class="header center">
@@ -28,10 +30,10 @@
       <nav class="nav center">
         <ul class="nav__list center">
           <li class="nav__list-item">
-            <a class="link link--nav" href="#projects">Projects</a>
+            <a class="link link--nav" href="#contenidos">Contenidos</a>
           </li>
           <li class="nav__list-item">
-            <a class="link link--nav" href="#skills">Skills</a>
+            <a class="link link--nav" href="#tools">Herramientas</a>
           </li>
           <li class="nav__list-item">
             <a class="link link--nav" href="#contact">Contact</a>
@@ -50,20 +52,31 @@
           <i aria-hidden="true" class="fas fa-bars"></i>
         </button>
       </nav>
+
+      <nav class="navbar">
+        <div class="lang-switch">
+          <input type="checkbox" id="lang-toggle" class="lang-checkbox">
+          <label for="lang-toggle" class="lang-btn btn-es">ES</label>
+          <label for="lang-toggle" class="lang-btn btn-en">EN</label>
+        </div>
+      </nav>
+
+      <p class="txt-es">Este texto esta en Español.</p>
+      <p class="txt-en">This text is in English.</p>
     </header>
 
     <main>
       <!-- About -->
       <div class="about center">
-
         <h1>Puesta en Producción Segura</h1>
-	<h2 class="about__role">Módulo del CE en Ciberseguridad en IT, curso 26-27</h2>
-	<p class="about__desc">
-   	 Web básica como práctica de uso de git y gitflow, dentro de las buenas prácticas
-  	  para el despliegue de software.
-   	 Curso impartido por el IES Aguadulce en 2026/27
-	</p>
-
+        <h2 class="about__role">
+          Módulo del CE en Ciberseguridad en IT, curso 26-27
+        </h2>
+        <p class="about__desc">
+          Web básica como práctica de uso de git y gitflow, dentro de las buenas
+          prácticas para el despliegue de software.
+          Curso impartido por el IES Aguadulce en 2026/27
+        </p>
 
         <div class="about__contact center">
           <a href="https://example.com">
@@ -88,93 +101,111 @@
         </div>
       </div>
 
-      <!-- Projects -->
-      <section id="projects" class="section projects">
-        <h2 class="section__title">Projects</h2>
+      <!-- Contenidos -->
+      <section id="contenidos" class="section projects">
+        <h2 class="section__title">Contenidos</h2>
 
         <div class="projects__grid">
+          <!-- Pruebas Unitarias -->
           <div class="project">
-            <h3>Project 1</h3>
+            <h3>Pruebas Unitarias</h3>
             <p class="project__description">
-              Ipsum accusamus ea excepturi aliquid eligendi amet. Explicabo
-              sapiente debitis labore sed ipsam Mollitia repellat illum quod
-              unde beatae Quis
+              Para verificar, de forma aislada, que cada componente o función
+              del código funciona correctamente antes de integrarse con el
+              resto del sistema. Permiten detectar errores de manera temprana,
+              reducir costes de corrección y facilitar el mantenimiento
+              evolutivo del software. Su impacto en una PPS es directo: al
+              minimizar fallos ocultos, aumentar la fiabilidad del código y
+              asegurar que los cambios no rompen funcionalidades existentes,
+              se reduce el riesgo de errores críticos en producción y se
+              incrementa la estabilidad y confianza en el despliegue final.
             </p>
             <ul class="project__stack">
-              <li class="project__stack-item">SASS</li>
-              <li class="project__stack-item">TypeScript</li>
-              <li class="project__stack-item">React</li>
+              <li class="project__stack-item">JUnit 5</li>
+              <li class="project__stack-item">TestNG</li>
+              <li class="project__stack-item">Mockito</li>
+              <li class="project__stack-item">Mocha+Chai</li>
+              <li class="project__stack-item">Jasmine</li>
             </ul>
 
             <a
-              href="https://github.com"
-              aria-label="source code"
+              href="https://www.geeksforgeeks.org/software-testing/unit-testing-software-testing/"
+              aria-label="Más información sobre pruebas unitarias"
               class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://example.com"
-              aria-label="live preview"
-              class="link link--icon"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <i aria-hidden="true" class="fas fa-external-link-alt"></i>
             </a>
           </div>
 
+          <!-- OWASP-ASVS -->
           <div class="project">
-            <h3>Project 2</h3>
+            <h3>OWASP-ASVS</h3>
             <p class="project__description">
-              Ipsum accusamus ea excepturi aliquid eligendi amet. Explicabo
-              sapiente debitis labore sed ipsam Mollitia repellat illum quod
-              unde beatae Quis
+              El estándar ASVS (Application Security Verification Standard)
+              proporciona un marco de requisitos y controles de seguridad
+              para verificar que una aplicación cumple con buenas prácticas
+              de desarrollo seguro antes de su puesta en producción. Su
+              objetivo es asegurar que el software ha sido evaluado de forma
+              sistemática en aspectos clave como autenticación, gestión de
+              sesiones, control de acceso, cifrado, validación de datos o
+              protección frente a vulnerabilidades comunes. Aplicarlo en el
+              ciclo de desarrollo permite reducir riesgos, garantizar un
+              nivel de seguridad consistente y ofrecer una base sólida para
+              una puesta en producción segura y confiable.
             </p>
             <ul class="project__stack">
-              <li class="project__stack-item">SASS</li>
-              <li class="project__stack-item">TypeScript</li>
-              <li class="project__stack-item">React</li>
+              <li class="project__stack-item">ASVS</li>
+              <li class="project__stack-item">Autenticación</li>
+              <li class="project__stack-item">Gestión de sesiones</li>
+              <li class="project__stack-item">Control de acceso</li>
+              <li class="project__stack-item">Validar entrada</li>
+              <li class="project__stack-item">Cifrado/Criptografía</li>
+              <li class="project__stack-item">API Security</li>
             </ul>
 
             <a
-              href="https://github.com"
-              aria-label="source code"
+              href="https://owasp.org/www-project-application-security-verification-standard/"
+              aria-label="Más información sobre OWASP ASVS"
               class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://example.com"
-              aria-label="live preview"
-              class="link link--icon"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <i aria-hidden="true" class="fas fa-external-link-alt"></i>
             </a>
           </div>
 
+          <!-- CI/CD -->
           <div class="project">
-            <h3>Project 3</h3>
+            <h3>CI/CD</h3>
             <p class="project__description">
-              Ipsum accusamus ea excepturi aliquid eligendi amet. Explicabo
-              sapiente debitis labore sed ipsam Mollitia repellat illum quod
-              unde beatae Quis
+              El CI/CD (Integración Continua/Despliegue continuo) es un conjunto
+              de prácticas que automatizan la construcción, prueba y despliegue
+              de aplicaciones, permitiendo entregar cambios de manera rápida y
+              confiable. Asegura que cada modificación del código pasa por
+              pruebas automatizadas (unitarias, de integración y de seguridad)
+              antes de llegar a producción, reduciendo errores humanos,
+              garantizando la consistencia del entorno y facilitando la
+              detección temprana de vulnerabilidades. Así, se logra un flujo
+              de entrega ágil y seguro, donde los riesgos se minimizan y la
+              aplicación se mantiene estable y confiable para los usuarios.
             </p>
             <ul class="project__stack">
-              <li class="project__stack-item">SASS</li>
-              <li class="project__stack-item">TypeScript</li>
-              <li class="project__stack-item">React</li>
+              <li class="project__stack-item">Docker</li>
+              <li class="project__stack-item">Kubernetes</li>
+              <li class="project__stack-item">Jenkins</li>
+              <li class="project__stack-item">GitHub Actions</li>
+              <li class="project__stack-item">GitLab</li>
+              <li class="project__stack-item">Azure DevOps</li>
             </ul>
 
             <a
-              href="https://github.com"
-              aria-label="source code"
+              href="https://www.getguru.com/es/reference/cicd"
+              aria-label="Más información sobre CI/CD"
               class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://example.com"
-              aria-label="live preview"
-              class="link link--icon"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <i aria-hidden="true" class="fas fa-external-link-alt"></i>
             </a>
@@ -183,28 +214,54 @@
       </section>
 
       <!-- Skills -->
-      <section class="section skills" id="skills">
-        <h2 class="section__title">Skills</h2>
+      <section class="section skills" id="herramientas">
+        <h2 class="section__title">Herramientas</h2>
         <ul class="skills__list">
-          <li class="skills__list-item btn btn--plain">HTML</li>
-          <li class="skills__list-item btn btn--plain">CSS</li>
-          <li class="skills__list-item btn btn--plain">SCSS</li>
-          <li class="skills__list-item btn btn--plain">JavaScript</li>
-          <li class="skills__list-item btn btn--plain">TypeScript</li>
-          <li class="skills__list-item btn btn--plain">React</li>
-          <li class="skills__list-item btn btn--plain">Redux</li>
-          <li class="skills__list-item btn btn--plain">Git</li>
-          <li class="skills__list-item btn btn--plain">Material UI</li>
-          <li class="skills__list-item btn btn--plain">Jest</li>
-          <li class="skills__list-item btn btn--plain">Enzyme</li>
-          <li class="skills__list-item btn btn--plain">CI/CD</li>
+          <li class="skills__list-item btn btn--plain"><a href="https://junit.org/" target="_blank" rel="noopener noreferrer">JUnit</a></li>
+          <li class="skills__list-item btn btn--plain"><a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">Git</a></li>
+          <li class="skills__list-item btn btn--plain"><a href="https://github.com/features/actions" target="_blank" rel="noopener noreferrer">GitHub Actions</a></li>
+          <li class="skills__list-item btn btn--plain"><a href="https://gitlab.com/" target="_blank" rel="noopener noreferrer">GitLab</a></li>
+          <li class="skills__list-item btn btn--plain"><a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer">Docker</a></li>
+          <li class="skills__list-item btn btn--plain"><a href="https://kubernetes.io/" target="_blank" rel="noopener noreferrer">Kubernetes</a></li>
+          <li class="skills__list-item btn btn--plain"><a href="https://www.jenkins.io/" target="_blank" rel="noopener noreferrer">Jenkins</a></li>
+          <li class="skills__list-item btn btn--plain"><a href="https://azure.microsoft.com/en-us/products/devops/pipelines" target="_blank" rel="noopener noreferrer">Azure Pipelines</a></li>
+          <li class="skills__list-item btn btn--plain"><a href="https://circleci.com/" target="_blank" rel="noopener noreferrer">CircleCl</a></li>
         </ul>
       </section>
 
+      <!-- Equipo -->
+      <section class="section skills" id="team">
+        <h2 class="section__title">Equipo</h2>
+        <ul class="skills__list">
+          <li class="skills__list-item btn btn--plain">Victor</li>
+          <li class="skills__list-item btn btn--plain">Marcelo</li>
+          <li class="skills__list-item btn btn--plain">Malte</li>
+          <li class="skills__list-item btn btn--plain">Bilal</li>
+          <li class="skills__list-item btn btn--plain">Enrique</li>
+          <li class="skills__list-item btn btn--plain">Alvaro</li>
+          <li class="skills__list-item btn btn--plain">Sebastián</li>
+          <li class="skills__list-item btn btn--plain">Milagros</li>
+          <li class="skills__list-item btn btn--plain">J.Antonio</li>
+          <li class="skills__list-item btn btn--plain">Daniel</li>
+          <li class="skills__list-item btn btn--plain">Juan Diego</li>
+          <li class="skills__list-item btn btn--plain">Roberto</li>
+          <li class="skills__list-item btn btn--plain">Natalia</li>
+          <li class="skills__list-item btn btn--plain">Miguel</li>
+          <li class="skills__list-item btn btn--plain">Raquel</li>
+          <li class="skills__list-item btn btn--plain">J.Antonio</li>
+          <li class="skills__list-item btn btn--plain">Antonio</li>
+          <li class="skills__list-item btn btn--plain">Alba</li>
+          <li class="skills__list-item btn btn--plain">Adrián</li>
+          <li class="skills__list-item btn btn--plain">Héctor</li>
+        </ul>
+      </section>
+
+      <!-- Skills 2 (feat-6) se ha borrado porque parece redundante -->
+
       <!-- Contact -->
       <section class="section contact center" id="contact">
-        <h2 class="section__title">Contact</h2>
-        <a href="mailto:fz605332@gmail.com">
+        <h2 class="section__title">Contacto</h2>
+        <a href="mailto:raul.ortega@iesaguadulce.es">
           <span class="btn btn--outline">Email me</span>
         </a>
       </section>
@@ -212,10 +269,10 @@
 
     <footer class="footer">
       <a
-        href="https://github.com/dev-bilal-code/cleanfolio-minimal"
+        href="https://github.com/raulortegar/pps-web"
         class="link footer__link"
       >
-        Created By Bilal
+        Creado por Alumno-PPS
       </a>
     </footer>
 
@@ -230,5 +287,3 @@
     <script src="./script.js"></script>
   </body>
 </html>
-
-
